@@ -5,9 +5,14 @@
 
   //Code here
 
+var me = {
+  name: "Simone",
+  age: 29,
+};
 
+console.log(me.name);
 
-
+// why is the alert not defined?
 
 
 //NEXT PROBLEM
@@ -19,6 +24,16 @@
 
   //Code here
 
+  var favoriteThings ={
+    band: "Feist",
+    food: "Pizza",
+    person: "Dad",
+    book: "Magazines",
+    movie: "Eternal Sunshine of the Spotless Mind",
+    holiday: "My birthday",
+  };
+
+
 
 
 
@@ -29,15 +44,18 @@
 
   //Code here
 
+favoriteThings.car="SUV";
+favoriteThings.brand="Jaguar";
 
 
-
+// why can't we use bracket notation to add these two additional keys and values to the object FavoriteThings?
 
 //Now change the value of the food key in your favoriteThings object to be 'Chicken Nuggets' and change the value of the book key in your favoriteThings object to be 'Harry Potter'.
 
   //Code here
 
-
+favoriteThings.food="Chicken Nuggets";
+favoriteThings.book="Harry Potter";
 
 
 
@@ -56,7 +74,11 @@ that is named color, with the value being the color of your backpack.
 */
 
   //Code here
-
+var item= "firstPocket";
+var backPack = {
+}
+backPack[item]= "chapstick";
+backPack.color="Blue";
 
 
 
@@ -66,7 +88,7 @@ that is named color, with the value being the color of your backpack.
 
   //Code here
 
- 
+ console.log(backPack);
 
 /*
 You probably noticed that it just alerted [object Object].
@@ -76,7 +98,7 @@ Instead, console.log your whole backPack object and then check out the console.
 
   //Code here
 
-
+console.log(backPack);
 
 
 
@@ -100,7 +122,8 @@ var user2 = {
 
 
 
-
+user2["name"]= 'Tyler S. McGinnis';
+user2["email"]= 'tyler.mcginnis@devmounta.in';
 
 // =============================================
 // =============================================
@@ -120,7 +143,7 @@ var user2 = {
 
   //Code Here
 
-
+var methodCollection={};
 
 
 /*
@@ -131,6 +154,14 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 
   //Code Here
 
+methodCollection ={
+  alertHello: function(){
+    alert('hello');
+  },
+  logHello: function(){
+    console.log('hello');
+}
+};
 
 
 
@@ -140,7 +171,8 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
   //Code Here
 
 
-
+methodCollection.logHello();
+methodCollection.logHello();
 
 
 
@@ -156,10 +188,20 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
   //Code Here
 
 
+function makePerson (name, birthday, ssn){
+  return {
+    name,
+    birthday,
+    ssn,
+  };
+}
+
+var x= makePerson("simone", "9/12/1987", 12345678);
+
+x;
 
 
 
-  
 
 
 //NEXT PROBLEM
@@ -170,4 +212,13 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 
   //Code Here
 
+function makeCard(cardNumber, expirationDate, securityCode){
+  return {
+    cardNumber,
+    expirationDate,
+    securityCode,
+  }
+};
+
+makeCard();
 
